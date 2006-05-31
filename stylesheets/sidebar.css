@@ -1,0 +1,82 @@
+#sidebar {
+	border-right: 1px dotted #ddd; 
+	font-size: 11px; 
+	text-align: right; 
+}
+
+#sidebar h3 { 
+	font: bold 14px "lucidamac bold", "lucida grande", verdana, arial, helvetica, sans-serif;
+	margin: 0 0 0.5em;
+}
+
+#sidebar h3 a:link,
+#sidebar h3 a:visited { color: #000; text-decoration: none; }
+#sidebar h3 a:hover,
+#sidebar h3 a:active { background: transparent; text-decoration: underline; }
+
+#sidebar ul {
+	list-style-type: none; 
+	margin: 0 0 2em; padding: 0;
+}
+
+#sidebar li { margin: 0; padding: 1px 0; }
+
+#sidebar em { font-style: normal; }
+
+#sidebar a.powered img { float: right; clear: both; }
+
+
+/**
+ * Live-search and results
+ */
+#sidebar .search p { margin: 0; }
+
+#sidebar .search p input { font-size: 11px; }
+
+#sidebar .search .loading {
+	background: url(/images/theme/spinner.gif) no-repeat right 50%;
+	margin: 3px 0; padding: 0 20px 0 0;
+	height: 15px;
+}
+
+#sidebar .search .results { margin: 0 0 1.25em; }
+
+#sidebar .search .results p,
+#sidebar .search .results h3 { 
+	font: bold 14px "lucidamac bold", "lucida grande", verdana, arial, helvetica, sans-serif;
+	margin: 0 0 0.5em;
+}
+
+#sidebar .search .results ul { 
+	background: #ffc; 
+	margin: 0; padding: 3px;
+}
+
+#sidebar .search .results a:link,
+#sidebar .search .results a:visited {	color: #222; }
+#sidebar .search .results a:hover, 
+#sidebar .search .results a:active  { color: #fff; }
+
+/**
+ * Flickr sidebar-node
+ */
+#sidebar #flickr {
+	margin: 0 0 2em;
+  float: right;
+}
+
+#sidebar #flickr div {
+	margin: 0 0 5px;
+	border: 1px solid #ddd;
+	float: right;
+	clear: both;
+}
+
+#sidebar #flickr img { 
+	border: 4px solid #fff;
+	display: block;
+}
+        
+#sidebar #flickr img:hover { border: 4px solid #ffc; }
+        
+#sidebar #flickr a { border: none; }

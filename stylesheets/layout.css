@@ -1,0 +1,46 @@
+/**
+ * Controls the main layout (width, height, margin, padding)
+ *
+ * #container
+ *   #header
+ *   #page
+ *     #content
+ *     #sidebar
+ *   #footer
+ */
+body {
+	text-align: center;
+	margin: 0; padding: 1em; 
+}
+
+#container {
+	width: 740px;
+	text-align: left; 
+	margin: 0 auto; padding: 0;
+}
+
+#header {
+	height: 60px; 
+	margin: 0 0 15px; padding: 0;
+}
+
+#page {}
+
+#content {
+	width: 500px;
+	margin: 0; padding: 0 0 0 10px; 
+	float:right;
+	text-align: left;
+}
+
+#sidebar {
+	width: 200px;
+	margin: 0; padding: 0 12px 1em; 
+	float: left; 
+}
+
+#footer {
+	height: 40px; 
+	margin: 10px 0 0; padding: 10px 0 0;
+	clear:both; 
+}

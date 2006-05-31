@@ -1,32 +1,17 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<title><%= page_title %></title>
- 
-<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<%= meta_tag 'ICBM', config_value(:geourl_location)  %>
-
-<link rel="EditURI" type="application/rsd+xml" title="RSD" href="<%= server_url_for :controller => 'xml', :action => 'rsd' %>" />
-<link rel="alternate" type="application/rss+xml" title="RSS" href="/xml/rss/feed.xml" />
-<link rel="alternate" type="application/atom+xml" title="Atom" href="/xml/atom/feed.xml" />
-  
-<%= stylesheet_link_tag '/stylesheets/theme/application.css', :media => 'all' %>
-  
-<%= javascript_include_tag 'cookies' %>
-<%= javascript_include_tag 'typo' %>
-
-<%= javascript_include_tag '/javascript/theme/prototype.js' %>
-<%= javascript_include_tag '/javascript/theme/effects.js' %>
-<%= javascript_include_tag '/javascript/theme/application.js' %>
-  
-<script type="text/javascript"><%= @content_for_script %></script>
+  <title><%=h page_title %></title>
+  <%= page_header %>
+  <%= stylesheet_link_tag '/stylesheets/theme/application.css', :media => 'all' %>
+  <%= javascript_include_tag '/javascript/theme/application.js' %>
 </head>
 
-<body id="<%= params[:controller].gsub('/','-') %>">
+<body>
 <div id="container">
   <div id="header">
-    <h1><span><%= link_to config_value('blog_name'), { :controller => '/' } %></span></h1>
-    <h2><%= config_value('blog_subtitle') %></h2>
+    <h1><span><%= link_to this_blog.blog_name, { :controller => '/' } %></span></h1>
+    <h2><%= this_blog.blog_subtitle %></h2>
   </div>
 
   <div id="page">
@@ -41,16 +26,13 @@
 
       <!-- sidebar components -->
       <%= render_sidebars %>
-
-      <!-- typo badge -->
-      <p><%= link_to image_tag('powered.gif'), 'http://typosphere.org/', { :class => 'powered' } %></p>
     </div>
     <br style="clear:both;" />
   </div>
 
   <div id="footer">
     <hr />
-    <p><%= link_to config_value('blog_name'), { :controller => '/' } %></p>
+    <p><%= link_to this_blog.blog_name, { :controller => '/' } %></p>
     <ul>
       <li>powered by <%= link_to 'typo', 'http://typosphere.org' %> /
           styled with <%= link_to 'scribbish', 'http://quotedprintable.com/pages/scribbish' %></li>

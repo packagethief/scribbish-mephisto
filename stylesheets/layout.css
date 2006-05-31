@@ -28,15 +28,10 @@ body {
 
 #content {
 	width: 500px;
-	margin: 0; padding: 0 0 0 10px; 
-	float:right;
-	text-align: left;
 }
 
 #sidebar {
 	width: 200px;
-	margin: 0; padding: 0 12px 1em; 
-	float: left; 
 }
 
 #footer {
@@ -44,3 +39,33 @@ body {
 	margin: 10px 0 0; padding: 10px 0 0;
 	clear:both; 
 }
+
+/*--------------------------------------------------------------
+ Sidebar Alignment: you can have left or right
+ --------------------------------------------------------------*/
+
+/* BEGIN: Right Sidebar */
+#sidebar {
+	float: right; text-align: left;
+	padding-left: 15px; 
+	border-left: 1px dotted #ddd; 
+}
+#content {
+	float: left;
+	padding-left: 5px; 
+}
+/* END: Right Sidebar */
+
+
+/* BEGIN: Left Sidebar
+#sidebar {
+	float: left; text-align: right;
+	padding-right: 10px; 
+	border-right: 1px dotted #ddd; 
+}
+
+#content {
+	float: left;
+	padding-left: 10px; 
+}
+/* END: Left Sidebar */

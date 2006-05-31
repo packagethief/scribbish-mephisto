@@ -3,12 +3,13 @@
 	  <p><input type="text" id="q" name="q" value="" /></p>
 	<%= end_form_tag %>
 	
-	<div id="loading" class="loading" style="display:none;">Searching</div>
+	<div id="loading" class="loading" style="display:none;">Searching...</div>
 	<div id="results" class="results"></div>
   <%= observe_field 'q', 
-  	:frequency  => 1, 
-  	:url        => { :controller => 'live', :action => 'search' }, 
-  	:loading    => "Element.show('loading')",
-  	:complete   => "Element.hide('loading')",
-  	:update     => 'results' %>
+                  	:url        => { :controller => 'live', :action => 'search' }, 
+                  	:frequency  => 1, 
+                  	:loading    => "Element.show('loading')",
+                  	:complete   => "Element.hide('loading')",
+                  	:update     => 'results',
+                  	:with       => "'q=' + escape($F('q'))" %>
 </div>

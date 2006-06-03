@@ -1,4 +1,4 @@
-### Scribbish-1.0 by [packagethief][1]
+### Scribbish-2.0 by [packagethief][1]
 
 Scribbish is both a typo theme, and a starting point (think scaffolding) for new Themes. Its layout standardizes on a simple xhtml structure, blog entries are formatted using the [hAtom microformat specification][2], and styles are separated into individual files which are included in the correct order, making it easier to control the cascade and to figure out 'what-goes-where'. Use it as-is, or copy it to make new themes.
 

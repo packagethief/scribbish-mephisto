@@ -100,18 +100,17 @@
 	margin: 1.3em 1em; padding: 0 1em;
 }
 
-#content pre, 
 #content code { 
 	font: normal 12px "bitstream vera sans mono", monaco "lucida console", "courier new", courier, serif;
 }
 
 #content pre {
-	color: #eee;
-	background: #000; 
-	margin: 1em 0; padding: 10px;
-	overflow: auto; 
+	color: #63FF00;
+	background: #000;
+	overflow: auto;
+	font: normal 12px "bitstream vera sans mono", monaco "lucida console", "courier new", courier, serif;
+	margin: 0.9em 0; padding: 8px;
 }
-
 
 /* Article Entries - class names based on http://microformats.org/wiki/hatom] */
 #content .atomentry { 

@@ -5,35 +5,35 @@
   xmlns:dc="http://purl.org/dc/elements/1.1/">
 <rdf:Description
   rdf:about=""
-  trackback:ping="<%= server_url_for :controller=>"articles", :action=>"trackback", :id=>@article %>"
+  trackback:ping="<%= @article.trackback_url %>"
   dc:title="<%=h @article.title.gsub(/-+/, '-') %>"
-  dc:identifier="<%= server_url_for :controller=>"articles", :action=>"read", :id=>@article %>"
-  dc:description="<%=h strip_html(article_html(@article)[0..255]).gsub(/-+/, '-') %>"
+  dc:identifier="<%= @article.permalink_url %>"
+  dc:description="<%=h (@article.html.strip_html[0..255]).gsub(/-+/, '-') %>"
   dc:creator="<%= h @article.author %>"
   dc:date="<%= @article.updated_at.xmlschema %>" />
 </rdf:RDF>
 -->
 
-<%= render :partial => 'article' %>
+<%= render :partial => 'article', :object => @article %>
 
 <% if @article.allow_pings? -%>
   <h5><a name="trackbacks">Trackbacks</a></h5>
   <p>
     Use the following link to trackback from your own site:<br />
-    <%= server_url_for :controller => 'articles', :action => 'trackback', :id => @article %>
-  </p>    
+    <%= @article.trackback_url %>
+  </p>
 
-  <% unless @article.trackbacks.blank? -%>
+  <% unless @article.published_trackbacks.blank? -%>
   <ol id="trackbacks" class="trackbacks">
-    <%= render(:partial => "trackback", :collection => @article.trackbacks) %>
-  </ol>  
-  <% end -%>  
+    <%= render(:partial => "trackback", :collection => @article.published_trackbacks) %>
+  </ol>
+  <% end -%>
 <% end -%>
 
-<% if @article.allow_comments? or @article.comments.size > 0 -%>
-  <h5><a name="comments">Comments</a></h5> 
+<% if @article.allow_comments? or @article.published_comments.size > 0 -%>
+  <h5><a name="comments">Comments</a></h5>
   <p><a href="#commentform">Leave a response</a></p>
-  
+
   <div id="comments_div">
     <%= render :partial => "comment" %>
   </div>

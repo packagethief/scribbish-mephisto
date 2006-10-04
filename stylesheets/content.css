@@ -189,33 +189,33 @@
 	margin: 0; padding: 0;
 }
 
-#content .comment,
-#content .trackback {
+#content div.comment,
+#content div.trackback {
 	border: 2px solid #ddd;
 	margin: 0 0 1.5em; padding: 1em;
 }
 
-#content .comment.preview { 
+#content div.comment.preview { 
 	background: #ffc;
 	border: 3px solid #fab444;
 }
 
-#content .comment   .author,
-#content .trackback .author { 
+#content div.comment   .author,
+#content div.trackback .author { 
 	font-weight: bold;
 	margin-bottom: 1em;
 }
 
-#content .comment   .author cite,
-#content .trackback .author cite {
+#content div.comment   .author cite,
+#content div.trackback .author cite {
 	font-size: 16px;
 	letter-spacing: -1px;
 }
 
-#content .comment   .author abbr, 
-#content .trackback .author abbr { color: #999; }
+#content div.comment   .author abbr, 
+#content div.trackback .author abbr { color: #999; }
 
-#content .comment .author .gravatar { 
+#content div.comment .author .gravatar { 
 	margin: 0 0 0.5em 0.5em;
 	float: right; 
 }

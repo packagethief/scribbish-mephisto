@@ -1,6 +1,13 @@
 /*--------------------------------------------------------------
  Syntax Highlighting - contributed by James Wilford
+ Closely matches TextMate's "All Hallow's Eve" theme
  --------------------------------------------------------------*/
+
+#content .typocode     { margin: 0.9em 0; padding: 8px; background: #000; }
+#content .typocode pre { margin: 0; padding: 0;}
+
+#content .typocode_linenumber .lineno     { text-align: right; }
+#content .typocode_linenumber .lineno pre { width: 23px; padding-right: 3px; color: #777; background: #222; }
 
 #content .typocode_ruby .normal    {}
 #content .typocode_ruby .comment   { color: #9933cc; }
@@ -42,13 +49,3 @@
 #content .typocode_yaml .date      { color: #ff0; }
 #content .typocode_yaml .ref       { color: #944; }
 #content .typocode_yaml .anchor    { color: #944; }
-
-#content .typocode pre {
-  background-color: #000;
-}
-
-#content .typocode .lineno {
-  text-align: right;
-  font-family: monospace;
-  padding-right: 1em;
-}

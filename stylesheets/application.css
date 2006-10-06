@@ -5,12 +5,12 @@
 
 @import 'layout.css';
 @import 'content.css';
-@import 'syntax.css'
+@import 'syntax.css';
 
-@media print { #sidebar { display:none; }
-               #content { float: none; width:90%; }
+@media print { #sidebar { display: none; }
+               #content { float: none; width: 90%; }
                #content pre { color: #000; background: #eee; }
-               #content form.comments { display:none; } }
+               #content form.comments { display: none; } }
 
 body {
 	background: url(../../images/theme/background.gif) repeat-x left top;

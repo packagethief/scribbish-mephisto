@@ -189,44 +189,43 @@
 	margin: 0; padding: 0;
 }
 
-#content div.comment,
-#content div.trackback {
+#content li.comment,
+#content li.trackback {
 	border: 2px solid #ddd;
 	margin: 0 0 1.5em; padding: 1em;
 }
 
-#content div.comment.preview { 
+#content li.comment.preview { 
 	background: #ffc;
 	border: 3px solid #fab444;
 }
 
-#content div.comment   .author,
-#content div.trackback .author { 
+#content li.comment   .author,
+#content li.trackback .author { 
 	font-weight: bold;
 	margin-bottom: 1em;
 }
 
-#content div.comment   .author cite,
-#content div.trackback .author cite {
+#content li.comment   .author cite,
+#content li.trackback .author cite {
 	font-size: 16px;
 	letter-spacing: -1px;
 }
 
-#content div.comment   .author abbr, 
-#content div.trackback .author abbr { color: #999; }
+#content li.comment   .author abbr, 
+#content li.trackback .author abbr { color: #999; }
 
-#content div.comment .author .gravatar { 
+#content li.comment .author .gravatar { 
 	margin: 0 0 0.5em 0.5em;
 	float: right; 
 }
 
-/* uncomment to enable a default gravatar
-#content .comment .author div {
+#content li.comment .author div {
 	margin: 0 0 0.5em 0.5em;
  	width: 60px; height: 60px;
 	background: url(../../images/theme/gravatar.gif) no-repeat left top;
 	float: right; 
-}*/
+}
 
 
 #content form.comments {

@@ -14,7 +14,7 @@ body {
 }
 
 #container {
-	width: 740px;
+	width: 900px;
 	text-align: left; 
 	margin: 0 auto; padding: 0;
 }
@@ -28,8 +28,8 @@ body {
 
 #content {
 	float: left;
-	width: 500px;
-	padding-left: 5px; 
+	width: 662px;
+	padding: 0 0 0 5px; 
 }
 
 #sidebar {

@@ -12,7 +12,7 @@
   <li>
     Meta: 
     {% if article.accept_comments || article.comments_count > 0 %}
-    {{ article | link_to_comments: "#comments" }}, 
+    {{ article | link_to_comments }}, 
     {% endif %}
     {{ article | link_to_article: "permalink" }}
     {% comment %} <!-- There's currently no per-article syndication feed for Mephisto --> , syndicate {% endcomment %}

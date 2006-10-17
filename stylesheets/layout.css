@@ -9,39 +9,75 @@
  *   #footer
  */
 body {
-	text-align: center;
-	margin: 0; padding: 1em; 
+	text-align:center;
+  padding:1em;
+	margin:0;
 }
 
 #container {
-	width: 900px;
-	text-align: left; 
-	margin: 0 auto; padding: 0;
+	text-align:left;
+	margin:0 auto;
+	width:900px;
+  padding:0;
 }
 
 #header {
-	height: 60px; 
-	margin: 0 0 15px; padding: 0;
+	margin:0 0 15px;
+	height:60px; 
+  padding:0;
 }
 
 #page {}
 
 #content {
-	float: left;
-	width: 662px;
 	padding: 0 0 0 5px; 
+  width:662px;
+	float: left;
 }
 
 #sidebar {
-	float: right;
+	border-left: 1px dotted #ddd;
+	padding-left: 15px;
 	text-align: left;
+	float: right;
 	width: 200px;
-	padding-left: 15px; 
-	border-left: 1px dotted #ddd; 
 }
 
 #footer {
-	height: 40px; 
-	margin: 10px 0 0; padding: 10px 0 0;
+  padding:10px 0 0;
+	margin:10px 0 0;
+	height:40px;
 	clear:both; 
 }
+
+/*--------------------------------------------------------------
+ Sidebar Alignment:you can have left or right
+ --------------------------------------------------------------*/
+
+/* BEGIN:Right Sidebar 
+#sidebar {
+	border-left:1px dotted #ddd;
+	padding-left:15px;
+  text-align:left;
+	float:right;
+}
+#content {
+	padding-left:5px;
+	float:left;
+}
+/* END:Right Sidebar */
+
+
+/* BEGIN:Left Sidebar
+#sidebar {
+	border-right:1px dotted #ddd;
+	padding-right:20px;
+  text-align:right;
+	float:left;
+}
+
+#content {
+  text-align:left;
+	float:right;
+}
+/* END:Left Sidebar */

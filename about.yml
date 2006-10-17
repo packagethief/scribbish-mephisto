@@ -1,0 +1,5 @@
+title: Scribbish
+author: packagethief
+version: 2.0
+homepage: http://quotedprintable.com/pages/scribbish
+summary: Scribbish is a Typo, Mephisto, and Wordpress theme, and a good starting point for new new themes. Its layout standardizes on a simple xhtml structure, blog entries are formatted using the hAtom microformat specification, and styles are separated into individual files which are included in the correct order, making it easier to control the cascade and to figure out 'what-goes-where'. Use it as-is, or copy it to make new themes.

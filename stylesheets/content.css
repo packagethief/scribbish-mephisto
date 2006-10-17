@@ -243,6 +243,7 @@
 /* Live-search and results */
 #sidebar .search p        { margin:0; }
 #sidebar .search p input  {
+  margin-bottom:15px;
 	font-size:11px;
   width:92%;
 }

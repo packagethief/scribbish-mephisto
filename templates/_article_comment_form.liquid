@@ -1,0 +1,24 @@
+{% commentform %}
+<fieldset>
+  <legend>Comment</legend>
+  <p>
+    <label class="text" for="comment_author">Name:</label><br/>
+    {{ form.name }}
+  </p>
+  <p>
+    <label class="text" for="comment_author_email">Email Address:</label><br />
+    {{ form.email }}
+  </p>
+  <p>
+    <label class="text" for="comment_author_url">Website:</label><br />
+    {{ form.url }}
+  </p>
+  <p>
+    <label class="text" for="comment_body">Comment:</label><br />
+    {{ form.body }}
+  </p>
+  <div class="formactions">
+    <input type="submit" value="Post comment" class="submit" />
+  </div>
+</fieldset>
+{% endcommentform %}

@@ -1,0 +1,17 @@
+<h5><a name="comments">Comments</a></h5>
+<p><a href="#comment-form">Leave a response</a></p>
+<div id="comments_div">
+  <ol id="comments" class="comments">
+    {% for comment in article.comments %}
+    <li class="comment" id="comment-{{ comment.id }}">
+      <div class="author">
+        <cite><span class="author">{{ comment.author_link }}</span></cite> &#150; 
+        <abbr title="{{ comment.created_at | format_date: 'long' }}"><span class="date">{{ comment.created_at | format_date: 'standard' }}</span></abbr>
+      </div>
+      <div class="content">
+        {{ comment.body }}
+      </div>
+    </li>
+    {% endfor %}
+  </ol>
+</div>

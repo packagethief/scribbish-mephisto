@@ -1,0 +1,9 @@
+<h2>Archives for {{ archive_date | date: "%B %Y" }}</h2>
+{% if articles.size > 0 %}
+<dl>
+{% for article in articles %}
+  <dt><b>{{ article | link_to_article }}</b></dt>
+  <dd><em>published by {{ article.author.login }} on {{ article.published_at | date: "%A, %B %d, %Y" }}<br/><br/></em></dd>
+{% endfor %}
+</dl>
+{% endif %}

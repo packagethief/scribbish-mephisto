@@ -9,8 +9,8 @@
  *   #footer
  */
 body {
-	text-align: center;
-  margin: 0; padding: 1em;
+  text-align: center;
+  margin: 0; padding: 0.6em 1em 1em 1em; 
 }
 
 #container {
@@ -20,8 +20,8 @@ body {
 }
 
 #header {
-  height: 60px; 
-  margin: 0 0 15px; padding: 0;
+  height: 62px; 
+  margin: 0 -0.5px 12px 0; padding: 0;
 }
 
 #page {}

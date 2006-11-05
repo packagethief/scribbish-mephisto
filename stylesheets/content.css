@@ -2,7 +2,7 @@
  Header
  --------------------------------------------------------------*/
 
-#header {
+#header { 
   background: url("/images/header_shadow.gif") repeat-x left bottom;
 }
 
@@ -14,12 +14,12 @@
 
 #header a:hover,
 #header a:active {
-  color:#930; background: transparent;
+  color: #930; background: transparent;
   text-decoration: none;
 }
 
 #header h1 {
-  font: bold 410% utopia, georgia, serif; 
+  font: bold 410% georgia, serif; 
   letter-spacing: -1px; 
   margin: 0;
   float: left; 
@@ -42,7 +42,7 @@
 #content h3,
 #content h4,
 #content h5 { 
-  font-family: utopia, "lucidamac bold", "lucida grande", arial, sans-serif; 
+  font-family: georgia, times;
   font-weight: normal;
   letter-spacing: -1px;
 }
@@ -76,7 +76,7 @@
 }
 
 #content p {
-  line-height: 15px; 
+  line-height: 14px; 
   margin: 0 0 1.2em;
 }
 
@@ -111,62 +111,59 @@
   overflow: auto;
   font: normal 12px "bitstream vera sans mono", monaco "lucida console", "courier new", courier, serif;
   margin: 0.9em 0; padding: 8px;
-
-  /* http://longren.org/2006/09/27/wrapping-text-inside-pre-tags */
-  white-space: pre-wrap;
-  white-space: -moz-pre-wrap !important;
-  white-space: -pre-wrap;
-  white-space: -o-pre-wrap;
-  word-wrap: break-word;
 }
 
 /* Article Entries - class names based on http://microformats.org/wiki/hatom] */
-#content .atomentry { 
+#content .hentry { 
   margin: 0 0 3em 0;
 }
 
-#content .atomentry .title {
-  font-size: 32px;
-  line-height: 94%;
+#content .hentry .entry-title {
+  font-size: 30px;
+  line-height: 99%;
   letter-spacing: -1.5px; 
   margin: 0;
 }
 
-#content .atomentry .title a:link,
-#content .atomentry .title a:visited { 
+#content .hentry .entry-title a:link,
+#content .hentry .entry-title a:visited { 
   color: #111;
   text-decoration: none;
 }
 
-#content .atomentry .title a:hover,
-#content .atomentry .title a:active { 
+#content .hentry .entry-title a:hover,
+#content .hentry .entry-title a:active { 
   background: transparent;
-        text-decoration: underline;
+  text-decoration: underline;
 }
 
-#content .atomentry .title .comment_count { color: #eee; }
+#content .hentry .entry-title .comment_count { color: #eee; }
 
-#content .atomentry .author {
-  color: #bbb;
-  font: normal 16px/14px "lucidamac bold", "lucida grande", arial, verdana, sans-serif;
+#content .hentry .vcard,
+#content .hentry .published {
+  float: left;
+  color: #a9a9a9;
+  font: normal 16px/14px helvetica, arial, verdana, sans-serif;
   letter-spacing: -1px;
-  margin: 0 0 1em;
+  margin: 1px 0 0.6em 2px;
 }
 
-#content .atomentry .author cite a,
-#content .atomentry .author cite a:hover { /* author mailto: link (if any) */
+#content .hentry .fn {
+  font-weight:bold;
+  margin-right: 5px;
+}
+
+#content .hentry .fn a,
+#content .hentry .fn a:hover {
   color: #aaa; background: transparent;
   text-decoration: none;
 }
 
-#content .atomentry .author abbr { /* posted date */
-  font-weight: bold;
-  color: #aaa;
-}
+#content .hentry .clear { clear: both; }
 
-#content .atomentry .content {}
+#content .hentry .entry-content { }
 
-#content .atomentry ul.meta { 
+#content .hentry ul.meta { 
   font-size: 10px;
   background: #eee;
   margin: 0; padding: 5px;
@@ -174,96 +171,97 @@
   list-style-type: none;
 }
 
-#content .atomentry ul.meta li { 
+#content .hentry ul.meta li { 
   line-height: 13px;
   margin: 0; padding: 0;
 }
 
-#content .atomentry .meta a:link,
-#content .atomentry .meta a:visited {
+#content .hentry .meta a:link,
+#content .hentry .meta a:visited {
   color: #555;
   text-decoration: none;
   border-bottom: 1px dotted #aaa;
 }
 
-#content .atomentry .meta a:hover,
-#content .atomentry .meta a:active {
+#content .hentry .meta a:hover,
+#content .hentry .meta a:active  {
   color: #fff;
 }
 
-/* Comments */
-#content ol.comments {
-	list-style-type: none;
-  padding: 0;
-	margin: 0;
+
+/* Comments and Trackbacks */
+#content ol.comments,
+#content ol.trackbacks {
+  list-style-type: none;
+  margin: 0; padding: 0;
 }
 
-#content .comment {
-	border: 2px solid #ddd;
-	margin: 0 0 1.5em;
-  padding: 1em;
+#content li.comment,
+#content li.trackback {
+  border: 2px solid #ddd;
+  margin: 0 0 1.5em; padding: 1em;
 }
 
-#content li.comment .author {
-	margin-bottom: 1em;
-	font-weight: bold;
+#content li.comment.preview { 
+  background: #ffc;
+  border: 3px solid #fab444;
+  margin: 0 0 1.5em; padding: 1em;
 }
 
-#content li.comment .author cite {
-	letter-spacing: -1px;
-	font-size: 16px;
+#content li.comment   .author,
+#content li.trackback .author { 
+  font-weight: bold;
+  margin-bottom: 1em;
 }
 
-#content li.comment .author abbr { 
-  color:#999;
+#content li.comment   .author cite,
+#content li.trackback .author cite {
+  font-size: 16px;
+  letter-spacing: -1px;
 }
 
-#content li.comment .author .gravatar {
-	margin:0 0 0.5em 0.5em;
-	float:right;
+#content li.comment   .author abbr, 
+#content li.trackback .author abbr { color: #999; }
+
+#content li.comment .author .gravatar { 
+  margin: 0 0 0.5em 0.5em;
+  float: right; 
 }
 
-/* uncomment to enable a default gravatar
 #content li.comment .author div {
-	background:url("/images/gravatar.gif") no-repeat left top;
-	margin:0 0 0.5em 0.5em;
-	float:right;
-  height:60px;
- 	width:60px; 
-}*/
+  margin: 0 0 0.5em 0.5em;
+  width: 60px; height: 60px;
+  background: url("/images/gravatar.gif") no-repeat left top;
+  float: right; 
+}
 
 #content form#comment-form {
-	border-top:1px solid #ddd;
-	background:#f2f2f2;
-	padding:1em 0.5em;
+  background: #f2f2f2;
+  border-top: 1px solid #ddd;
+  padding: 1em 0.5em;
 }
 
 #content form#comment-form fieldset { 
-  border:none;
+  border: none;
 }
 
-#content form#comment-form legend {
-  display:none;
+#content form#comment-form legend { 
+  display: none;
 }
 
-#content form#comment-form label {
-  font-weight:bold;
+#content form#comment-form label { 
+  font-weight: bold;
 }
 
-#content form#comment-form p input {
-	padding:3px;
-	width:40%;
-}
-
-#content form#comment-form textarea {
-  height:150px;
-	padding:3px;
-  width:90%;
+#content form#comment-form textarea { 
+  width: 90%; height: 150px;
+  padding: 3px;
 }
 
 /*--------------------------------------------------------------
  Sidebar
  --------------------------------------------------------------*/
+
 #sidebar {
   font-size: 11px; 
 }
@@ -296,14 +294,12 @@
 #sidebar em { font-style: normal; }
 
 /* Live-search and results */
-#sidebar .search p {
-  margin:0;
+#sidebar .search p { 
+  margin: 0;
 }
 
-#sidebar .search p input  {
-  margin-bottom: 15px;
-	font-size: 11px;
-  width: 92%;
+#sidebar .search p input {
+  font-size: 11px; width: 92%;
 }
 
 /*--------------------------------------------------------------

@@ -1,6 +1,8 @@
-{% for article in articles %}
-<div class="atomentry" id="article-{{ article.id }}">
-  <h2 class="title">
+{% if mode == 'single' %}
+{% include 'article_rdf' %}
+{% endif %}
+<div class="hentry" id="article-{{ article.id }}">
+  <h2 class="entry-title">
     {{ article | link_to_article }}
     {% if article.accept_comments || article.comments_count > 0 %}
     <span class="comment_count">{{ article.comments_count }}</span>
@@ -10,4 +12,6 @@
   {% include 'article_content' %}
   {% include 'article_meta' %}
 </div>
-{% endfor %}
+{% if mode == 'single' %}
+{% include 'article_comments' %}
+{% endif %}

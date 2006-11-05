@@ -9,13 +9,13 @@
 @import 'local.css';
 
 @media print { #sidebar { display: none; }
-               #content { float: none; width:90%; }
+               #content { float: none; width: 90%; }
                #content pre { color: #000; background: #eee; }
-               #content form.comments { display:none; } }
+               #content form.comments { display: none; } }
 
 body {
-	background: #fff url("/images/background.gif") repeat-x left top;
-	font: normal 12px "lucida grande", verdana, arial, helvetica, sans-serif;
+  background: url(../../images/theme/background.gif) repeat-x left top;
+  font: normal 12px "lucida grande", verdana, sans-serif;
 }
 
 input,

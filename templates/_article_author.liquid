@@ -1,8 +1,5 @@
-<p class="author">
-  Posted by <cite>{{ article.author.login }}</cite>
-  <abbr class="published" title="{{ article.published_at | date: '%Y-%m-%dT%H:%M:%S+00:00' }}">
-    <span class="scribbish_date" title="{{ article.published_at | date: "%A, %B %d, %Y %H:%M:%S %Z" }}">
-      {{ article.published_at | date: "%A, %B %d, %Y %H:%M:%S %Z" }}
-    </span>
-  </abbr>
-</p>
+<div class="vcard">
+  Posted by <span class="fn">{{ article.author.login }}</span>
+</div>
+<abbr class="published" title="{{ article.published_at | date: '%Y-%m-%dT%H:%M:%S+00:00' }}"></abbr>
+<br class="clear" />

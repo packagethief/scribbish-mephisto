@@ -1,18 +1,5 @@
-{% include 'article_rdf' %}
-<div class="atomentry" id="article-{{ article.id }}">
-  <h2 class="title">
-    {{ article.title }}
-    {% if article.accept_comments || article.comments_count > 0 %}
-    <span class="comment_count">{{ article.comments_count }}</span>
-    {% endif %}
-  </h2>
-  {% include 'article_author' %}
-  {% include 'article_content' %}
-  {% include 'article_meta' %}
-</div>
-{% if article.comments_count > 0 %}
-{% include 'article_comments' %}
-{% endif %}
-{% if article.accept_comments %}
-{% include 'article_comment_form' %}
-{% endif %}
+{% unless mode == 'page' %}
+  {% include 'article' with articles %}
+{% else %}
+  {% include 'page' %}
+{% endunless %}

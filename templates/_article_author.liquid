@@ -1,5 +1,5 @@
 <div class="vcard">
   Posted by <span class="fn">{{ article.author.login }}</span>
 </div>
-<abbr class="published" title="{{ article.published_at | date: '%Y-%m-%dT%H:%M:%S+00:00' }}"></abbr>
+<abbr class="published" title="{{ article.published_at | date: '%Y-%m-%dT%H:%M:%S+00:00' }}">on {{ article.published_at | date: '%A, %B %d' }}</abbr>
 <br class="clear" />

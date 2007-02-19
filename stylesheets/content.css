@@ -2,7 +2,7 @@
  Header
  --------------------------------------------------------------*/
 
-#header { 
+#header {
   background: url("/images/header_shadow.gif") repeat-x left bottom;
 }
 
@@ -235,25 +235,29 @@
   float: right; 
 }
 
-#content form#comment-form {
+#content #comment-form {
   background: #f2f2f2;
   border-top: 1px solid #ddd;
   padding: 1em 0.5em;
 }
 
-#content form#comment-form fieldset { 
+#content #comment-form fieldset { 
   border: none;
 }
 
-#content form#comment-form legend { 
+#content #comment-form legend { 
   display: none;
 }
 
-#content form#comment-form label { 
+#content #comment-form label { 
   font-weight: bold;
 }
 
-#content form#comment-form textarea { 
+#content #comment-form input[type=text] {
+  width: 300px;
+}
+
+#content #comment-form textarea { 
   width: 90%; height: 150px;
   padding: 3px;
 }

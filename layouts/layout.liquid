@@ -11,7 +11,6 @@
   {{ head.feed }}
 
   {{ 'prototype' | javascript }}
-  {{ 'scribbish' | javascript }}
 
   {{ 'application' | stylesheet }}
 {% endhead %}
@@ -25,17 +24,10 @@
   <div id="page">
     <div id="content">
       {{ content_for_layout }}
-      <script type="text/javascript">
-        //<![CDATA[
-        show_dates_as_local_time()
-        //]]>
-      </script>
     </div>
 
     <div id="sidebar">
 
-      {% comment %}
-      <!-- Delete the comment blocks if you'd like to display the search form -->
       <div class="sidebar-node">
         <div id="search" class="search">
           <form action="/search" id="sform" method="get" name="sform">
@@ -43,7 +35,6 @@
           </form>
         </div>
       </div>
-      {% endcomment %}
 
       {% comment %}
       <!-- Delete the comment blocks if you'd like to display links for the monthly archive -->
@@ -100,8 +91,8 @@
     <hr />
     <p><a href="/">{{ site.title }}</a></p>
     <ul>
-      <li>powered by <a href="http://mephistoblog.com" target="_blank">Mephisto</a> /
-          styled with <a href="http://quotedprintable.com/pages/scribbish" target="_blank">scribbish</a></li>
+      <li>powered by <a href="http://mephistoblog.com">Mephisto</a> /
+          styled with <a href="http://quotedprintable.com/pages/scribbish">scribbish</a></li>
     </ul>
   </div>
 

@@ -3,7 +3,24 @@
  Closely matches TextMate's "All Hallow's Eve" theme
  --------------------------------------------------------------*/
 
-.CodeRay      {
+/*--------------------------------------------------------------
+ For Dan Webb's unobtrusive code highlighter
+ --------------------------------------------------------------*/
+
+#content pre  code { color: white; }
+#content code span.comment  { color: #9933cc;  }
+#content code span.string   { color: #66cc33;  }
+#content code span.brackets { color: #fff;     }
+#content code span.keywords { color: #cc7833;  }
+#content code span.symbol   { color: #3387cc;  }
+#content code span.defname  { color: #fff;     }
+#content code span.erb      { background: #333;}
+
+/*--------------------------------------------------------------
+ For CodeRay
+ --------------------------------------------------------------*/
+
+.CodeRay {
   border:1px solid #ccc;
   border-right:1px dotted #ccc;
   background-color:#444;
@@ -15,6 +32,7 @@
   padding:0;
   z-index:1;
 }
+
 .CodeRayMoused {
   border:solid 1px #ccc;
   width:900px;
@@ -24,7 +42,6 @@
 div.CodeRay   { }
 span.CodeRay  { }
 table.CodeRay { border-collapse:collapse; }
-
 
 table.CodeRay td { vertical-align:top; }
 

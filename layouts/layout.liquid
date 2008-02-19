@@ -1,5 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 {% head %}
   <title>{{ site.title }}{% if article %}: {{ article.title }}{% else%} - {{ site.subtitle }}{% endif %}</title>
   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -11,92 +12,42 @@
   {{ head.feed }}
 
   {{ 'prototype' | javascript }}
+  {{ 'code_highlighter' | javascript }}
+  {{ 'ruby' | javascript }}
+  {{ 'application' | stylesheet }}
 
   {{ 'application' | stylesheet }}
 {% endhead %}
+
 <body>
-<div id="container">
-  <div id="header">
-    <h1><span><a href="/">{{ site.title }}</a></span></h1>
-    <h2>{{ site.subtitle }}</h2>
-  </div>
-
-  <div id="page">
-    <div id="content">
-      {{ content_for_layout }}
+  <div id="container">
+    <div id="header">
+      <h1><span><a href="/">{{ site.title }}</a></span></h1>
+      <h2>{{ site.subtitle }}</h2>
     </div>
 
-    <div id="sidebar">
-
-      <div class="sidebar-node">
-        <div id="search" class="search">
-          <form action="/search" id="sform" method="get" name="sform">
-            <p><input type="text" id="q" name="q" value="" /></p>
-          </form>
-        </div>
+    <div id="page">
+      <div id="content">
+        {{ content_for_layout }}
       </div>
 
-      {% comment %}
-      <!-- Delete the comment blocks if you'd like to display links for the monthly archive -->
-      {% if section.months.size > 0 %}
-      <div class="sidebar-node">
-        <h3>Archives</h3>
-        <ul>
-        {% for month in section.months %}
-          <li>{{ section | link_to_month: month }} ({{ section | monthly_articles: month | size }})</li>
-        {% endfor %}
-        </ul>
-      </div>
-      {% endif %}
-      {% endcomment %}
-
-      {% comment %}
-      <!-- Delete the comment blocks if you'd like to list out your sections -->
-      {% if site.sections.size > 0 %}
-      <div class="sidebar-node">
-        <h3>Sections</h3>
-        <ul>
-        {% for section in site.sections %}
-          <li>{{ section | link_to_section }} ({{ section.articles | size }})</li>
-        {% endfor %}
-        </ul>
-      </div>
-      {% endif %}
-      {% endcomment %}
-
-      {% comment %}
-      <!-- Delete the comment blocks if you'd like to list out your tags -->
-      {% if site.tags.size > 0 %}
-      <div class="sidebar-node">
-        <h3>Tags</h3>
-        <ul>
-        {% for tag in site.tags %}
-          <li>{{ tag | link_to_tag }} ({{ tag | tagged_articles | size }})</li>
-        {% endfor %}
-        </ul>
-      </div>
-      {% endif %}
-      {% endcomment %}
-
-      <div class="sidebar-node">
-        <p><a href="http://mephistoblog.com/" class="powered">{{ 'mephisto-badge-tiny.png' | img_tag }}</a></p>
+      <div id="sidebar">
+        {% include 'sidebar' %}
       </div>
 
+      <br style="clear:both;" />
     </div>
-    <br style="clear:both;" />
 
+    <div id="footer">
+      <hr />
+      <p><a href="/">{{ site.title }}</a></p>
+      <ul>
+        <li>
+          powered by <a href="http://mephistoblog.com">Mephisto</a> /
+          styled with <a href="http://quotedprintable.com/pages/scribbish">scribbish</a>
+        </li>
+      </ul>
+    </div>
   </div>
-
-  <div id="footer">
-    <hr />
-    <p><a href="/">{{ site.title }}</a></p>
-    <ul>
-      <li>powered by <a href="http://mephistoblog.com">Mephisto</a> /
-          styled with <a href="http://quotedprintable.com/pages/scribbish">scribbish</a></li>
-    </ul>
-  </div>
-
-</div>
-
 </body>
 </html>

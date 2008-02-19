@@ -1,0 +1,66 @@
+<div class="sidebar-node">
+  <div id="search" class="search">
+    <form action="/search" id="sform" method="get" name="sform">
+      <p><input type="text" id="q" name="q" value="" /></p>
+    </form>
+  </div>
+</div>
+
+<div class="sidebar-node">
+  <h3>About</h3>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  </p>
+</div>
+
+{% comment %}
+<!-- Delete the comment blocks if you'd like to display links for the monthly archive -->
+{% if section.months.size > 0 %}
+<div class="sidebar-node">
+  <h3>Archives</h3>
+  <ul>
+    {% for month in section.months %}
+      <li>{{ section | link_to_month: month }} ({{ section | monthly_articles: month | size }})</li>
+    {% endfor %}
+  </ul>
+</div>
+{% endif %}
+{% endcomment %}
+
+{% comment %}
+<!-- Delete the comment blocks if you'd like to list out your sections -->
+{% if site.sections.size > 0 %}
+<div class="sidebar-node">
+  <h3>Sections</h3>
+  <ul>
+    {% for section in site.sections %}
+      <li>{{ section | link_to_section }} ({{ section.articles | size }})</li>
+    {% endfor %}
+  </ul>
+</div>
+{% endif %}
+{% endcomment %}
+
+{% comment %}
+<!-- Delete the comment blocks if you'd like to list out your tags -->
+{% if site.tags.size > 0 %}
+<div class="sidebar-node">
+  <h3>Tags</h3>
+  <ul>
+    {% for tag in site.tags %}
+      <li>{{ tag | link_to_tag }} ({{ tag | tagged_articles | size }})</li>
+    {% endfor %}
+  </ul>
+</div>
+{% endif %}
+{% endcomment %}
+
+<div class="sidebar-node">
+  <p><a href="http://mephistoblog.com" class="powered">{{ 'mephisto-badge-tiny.png' | img_tag }}</a></p>
+</div>
+
